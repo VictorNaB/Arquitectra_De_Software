@@ -23,7 +23,7 @@ import java.sql.ResultSet;
  */
 public class Login extends HttpServlet {
 
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/Plataforma_Sueños";
+    static final String DB_URL = "jdbc:postgresql://localhost:5432/Prueba";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "2324";
 
@@ -37,7 +37,7 @@ public class Login extends HttpServlet {
             Class.forName("org.postgresql.Driver");
             java.sql.Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
-            String sql = "SELECT * FROM correos WHERE correo = ? AND contraseña = ?";
+            String sql = "SELECT * FROM accesos WHERE correo = ? AND contraseña = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, correo);
             stmt.setString(2, contraseña);

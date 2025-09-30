@@ -13,9 +13,9 @@
 <body>
     <h2>Crear Nueva Campaña</h2>
     <form action="Campañas" method="POST">
-        Fecha de Publicación: <input type="date" name="fecha_publicacion" required><br><br>
-        Título: <input type="text" name="titulo" required><br><br>
-        Descripción: <textarea name="descripcion" required></textarea><br><br>
+        Fecha de Publicación: <input type="date" name="Fechapublicacion" required><br><br>
+        Título: <input type="text" name="Titulo" required><br><br>
+        Descripción: <textarea name="Descripcion" required></textarea><br><br>
         <input type="submit" value="Crear Campaña">
     </form>
 </body>
