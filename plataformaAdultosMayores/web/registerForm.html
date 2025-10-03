@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border 0.3s;
+        }
+        input:focus {
+            border: 1px solid #6c63ff;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #6c63ff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #5146d9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registro de Usuario</h2>
+        <form action="usuario" method="post">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+
+            <div>
+                <select name="tipodocumento" required >
+                    <option value="">Seleccione tipo documento</option>
+                    <option value="1">Cédula de Ciudadanía</option>
+                    <option value="4">Cédula de Extranjería</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="5">NIT</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="documento">Documento:</label>
+                <input type="text" id="documento" name="documento" required>
+            </div>
+            <div>
+                Fecha Nacimiento: <input type="date" name="fecha_nacimiento" required><br><br>
+            </div>
+            
+            <div>
+                <select name="idtipotelefono" required>
+                    <option value="">Seleccione tipo telefono</option>
+                    <option value="1">Fijo</option>
+                    <option value="2">Celular</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+            
+            <input type="hidden" name="idRol" value="3">
+            
+            <button type="submit" class="btn">Registrarse</button>
+        </form>
+    </div>
+
+</body>
+</html>
